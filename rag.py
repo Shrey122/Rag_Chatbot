@@ -33,7 +33,7 @@ app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024  # 100 MB
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 # Retrieve Groq API Key from environment variables for security
-groq_api_key = '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'
+groq_api_key = ''
 
 class RAGSystem:
     def __init__(self, model_name='all-MiniLM-L6-v2', llm_model='llama-3.1-8b-instant'):
@@ -401,3 +401,4 @@ def uploaded_file(filename):
 
 if __name__ == '__main__':
     app.run(debug=True, port=8001)
+
